@@ -24,4 +24,30 @@ Hackathon project involving the combination of different data sources into an ap
 ### teams
 
 - team 1
-  - 
+  - Juliann Talkington
+  - Stephanie Burcombe
+  - David Lazeskay
+- team 2
+  - Elliot Han
+  - Bisham Mohabir
+  - Nicholas Simoncelli
+  - David Robosky
+- team 3
+  - Raul Jauregui
+  - Brady Greco
+  - Kyle Apostol
+  - Tony Jin
+- team 4
+  - Dwight Millar
+  - Alexander Mac
+  - Bisham Mohabir
+- team 5
+  - Richard Yun
+  - Daniel Seong
+  - Michael Sandoval
+  - Lawrence Tran
+- team 6
+  - Diego Garcia Martinez
+  - Edward Colley
+  - Brandon Collette
+  - Steve Min
