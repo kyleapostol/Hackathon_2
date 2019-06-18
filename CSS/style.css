@@ -1,0 +1,84 @@
+body {
+    background-image: url('/Image/Sunset.jpg');
+}
+
+#login-modal {
+    display: none;
+    position: fixed;
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom:0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content{
+    background-color: darkblue;
+    margin: 15% auto;
+    width: 70%;
+    color: white;
+}
+
+.user-name-input {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent; 
+    border: 1px solid #888;
+    color: white;
+    height: 95%;
+    width: 80%; 
+    position: absolute;
+}  
+
+#user-name {
+    top: 65%;
+    left: 45%;
+    height: 7%;
+    width: 10%;
+    position: absolute;
+    text-align: center;
+    padding: 10px 15px;
+    color: red;
+    font-size: 20px;
+    background-color: white;
+    
+}
+/* fix with Raul */
+em{
+    visibility: hidden;
+}
+#tweet{
+    color: yellow;
+    border-color: rgb(216, 216, 216) rgb(209, 209, 209) rgb(186, 186, 186);
+    border-style: solid;
+    border-width: 1px;
+    padding: 1px 7px 2px;
+}
+.box {
+    color: yellow;
+    border-radius: 25px;
+    background-image: url("/css/Image/quote-runner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 500px;
+    border: 10px solid black;
+    padding: 50px;
+    margin: 150px;
+}
+h1 {
+    font-family: 'Times New Roman',cursive;
+    text-align:center;
+}
+p {
+    margin:20px;
+}
+.btn btn-primary{
+    margin-left: 24%;
+    padding-top: 20px;
+}
