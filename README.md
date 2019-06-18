@@ -29,7 +29,6 @@ Hackathon project involving the combination of different data sources into an ap
   - David Lazeskay
 - team 2
   - Elliot Han
-  - Bisham Mohabir
   - Nicholas Simoncelli
   - David Robosky
 - team 3
