@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hackathon 2</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../JS/darksky.js"></script>
+    <script src="/JS/quote.js"></script>
+    <script src="/JS/musix.js"></script>
+    <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
+    <script src="/JS/main.js"></script>
+</head>
+<body>
+    <div class="modal" id="login-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title"></h1>
+                <input type="text" class="user-name-input" placeholder="What is your name?">
+                <button class="user-name-submit"> Submit </button>
+            </div>
+        </div>
+    </div>
+        <!-- <div class= "container-fluid">
+
+
+        <div class = 'box bottom'>
+            <h1>Quote Of The Day</h1>
+            <br>
+            <em>These Random Quote's from  <a href = "https://api.forismatic.com/api/1.0/?" target ='_blank'>FORISMATIC.com</a>
+            </em>
+            <br>
+            <br>
+            <button class="btn btn-success" ><i class="fa fa-quote-right" aria-hidden="true"></i> More Wisdom</button>
+            <a class='btn btn-primary' id='tweet' href='#' target='_blank' role='button'><i class="fa fa-twitter"></i> Tweet This Wisdom</a>
+            <p id="createQuote"></p>
+    
+        </div> -->
+    <div class="MainPage">
+        <header> Good Morning, </header>
+        <div class='weather_Section'> [WEATHER SECTION] </div>
+        <div class='Music_Section'> [Music of the day]</div>
+        <div class='Daily_quote'> [Daily Quote]</div>
+        <input onclick="responsiveVoice.speak();" type="button" value="Play" /> <!-- adjust to click handler later  -->
+    </div>
+</body>
+</html>
