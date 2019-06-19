@@ -1,6 +1,7 @@
 class DarkSkyObject{
     constructor(){
 
+
         this.summary = null;
         this.handleDataReceived = this.handleDataReceived.bind(this);
         this.getLocation = this.getLocation.bind(this);
@@ -48,6 +49,4 @@ class DarkSkyObject{
         var weatherQuoteInput = new Quote();
         weatherQuoteInput.weatherQuote(weather);
     }
-
-
-}
+}  
