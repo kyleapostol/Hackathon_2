@@ -4,11 +4,16 @@
     <title>Hackathon 2</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
+    <script src='JS/speech.js'></script>
+
     <script src="JS/darksky.js"></script>
     <script src="JS/quote.js"></script>
     <script src="JS/musix.js"></script>
     <script src="JS/youtube.js"></script>
     <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
+
     <script src="JS/main.js"></script>
 </head>
 <body>
@@ -21,8 +26,16 @@
             </div>
         </div>
     </div>
-        <!-- <div class= "container-fluid">
 
+    <div class="MainPage">
+        <header> Good Morning, </header>
+        <div class='weather_Section'> [WEATHER SECTION] </div>
+        <div class='Music_Section'> [Music of the day]</div>
+        <div class='Daily_quote'> [Daily Quote]</div>
+        <div class='.btn-success'> <button>Quote</button> </div>
+        <button id='speech' type="button" value="Play">Play</button> 
+        <!-- adjust to click handler later  -->
+        <button class="test-button">Test</button>
 
         <div class = 'box bottom'>
             <h1>Quote Of The Day</h1>
@@ -49,6 +62,7 @@
 
         </div>
         <input onclick="responsiveVoice.speak();" type="button" value="Play" /> <!-- adjust to click handler later  -->
+
     </div>
 </body>
 </html>
