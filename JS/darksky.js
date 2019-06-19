@@ -11,7 +11,8 @@ class DarkSkyObject{
     }
         handleDataReceived(response) { //server response to the client
             console.log(response);
-            var temperature = $('<div>').text("It is currently " +response.currently.temperature+ "°F");
+            var text = "It is currently " +response.currently.temperature+ "°F"
+            var temperature = $('<div>').text(text);
             var currentSummary = $('<div>').text("Current summary: " +response.currently.summary);
             var minuteSummary = $('<div>').text("Minutely summary: " +response.minutely.summary);
             var hourSummary = $('<div>').text("Hourly summary: " +response.hourly.summary);
