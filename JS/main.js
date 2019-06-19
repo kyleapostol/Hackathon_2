@@ -11,3 +11,4 @@ function initApp() {
     musicPlaylist.initClient; // pass in result from weather data
     var random = new Quote;
     random.randomQuote();
+}
