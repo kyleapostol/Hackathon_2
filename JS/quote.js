@@ -21,5 +21,4 @@ class Quote {
         $.ajax(ajaxRandomQuote);
     }
 }
-}
 
