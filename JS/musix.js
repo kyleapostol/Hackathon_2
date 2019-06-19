@@ -5,7 +5,7 @@ class MusixMatch {
     initClient( dailyForecast ) {
         var getGenre = 'https://api.musixmatch.com/ws/1.1/music.genre.get'
         var dailyForecast = ""; // implement dark sky's daily output here
-        ajaxMusixData = {
+        var ajaxMusixData = {
             datatype: "json",
             url: getGenre,
             method: 'GET',

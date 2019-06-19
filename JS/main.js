@@ -5,4 +5,6 @@ function initApp() {
     newDarkSky.handleDataReceieved();
     var musicPlaylist = new MusixMatch;
     musicPlaylist.initClient(parameter); // pass in result from weather data
+    var random = new Quote();
+    random.randomQuote();
 }
