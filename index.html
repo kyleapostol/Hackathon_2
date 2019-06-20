@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
     <title>Hackathon 2</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
     <script src="JS/darksky.js"></script>
     <script src="JS/quote.js"></script>
     <!-- <script src="JS/musix.js"></script> -->
@@ -46,7 +47,25 @@
             <div id="video-player"></div>
         </div>
         <div class='quote-container' id='daily-quotes'> [Daily Quote]
+        <div class='.btn-success'> <button>Quote</button> </div>
+        <button id='speech' type="button" value="Play">Play</button> 
+        <!-- adjust to click handler later  -->
+<!--        <button class="test-button">Test</button>-->
+<!--            <div class= "container-fluid">-->
 
+
+<!--&lt;!&ndash;            <div class = 'box bottom'>&ndash;&gt;-->
+<!--&lt;!&ndash;                <h1>Quote Of The Day</h1>&ndash;&gt;-->
+
+<!--                <button class="btn btn-success" ><></></button>-->
+<!--&lt;!&ndash;                <a class='btn btn-primary' id='tweet' href='#' target='_blank' role='button'><i class="fa fa-twitter"></i> Tweet This Wisdom</a>&ndash;&gt;-->
+<!--                <p id="createQuote"></p>-->
+
+<!--            </div>-->
+            <div id="quoteBox">
+            <div class="quoteDiv"></div>
+            <div class="quoteAuthor"></div>
+            </div>
         </div>
         <input onclick="responsiveVoice.speak();" type="button" value="Play" /> <!-- adjust to click handler later  -->
     </div>

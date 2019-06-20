@@ -49,36 +49,16 @@ body {
     background-color: white;
     
 }
-/* fix with Raul */
-/* em{
-    visibility: hidden;
+#quoteBox{
+    background-image: url("Image/quote-runner.jpg");
 }
-#tweet{
+.quoteAuthor{
     color: yellow;
-    border-color: rgb(216, 216, 216) rgb(209, 209, 209) rgb(186, 186, 186);
-    border-style: solid;
-    border-width: 1px;
-    padding: 1px 7px 2px;
+    font-size: 40px;
+
 }
-.box {
+.quoteDiv{
+    font-size: 25px;
     color: yellow;
-    border-radius: 25px;
-    background-image: url("/css/Image/quote-runner.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 500px;
-    border: 10px solid black;
-    padding: 50px;
-    margin: 150px;
+
 }
-h1 {
-    font-family: 'Times New Roman',cursive;
-    text-align:center;
-}
-p {
-    margin:20px;
-}
-.btn btn-primary{
-    margin-left: 24%;
-    padding-top: 20px;
-} */
