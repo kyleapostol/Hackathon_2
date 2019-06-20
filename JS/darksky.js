@@ -47,6 +47,6 @@ class DarkSkyObject{
 
     quoteMethod(weather){
         var weatherQuoteInput = new Quote();
-        weatherQuoteInput.weatherQuote(weather);
+        weatherQuoteInput.randomQuote(weather);
     }
 }  
