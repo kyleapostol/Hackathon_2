@@ -2,7 +2,7 @@ class MusixMatch {
     constructor() {
         this.initClient = this.initClient.bind(this);
     }
-    initClient( dailyForecast ) {
+    initClient() {
         var getGenre = 'https://api.musixmatch.com/ws/1.1/music.genre.get'
 
         //var dailyForecast = null; // implement dark sky's daily output here
