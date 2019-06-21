@@ -1,11 +1,9 @@
-body {
-    background-image: url('/Image/Sunset.jpg');
-}
+
 
 #login-modal {
     display: none;
     position: fixed;
-    z-index: 1; 
+    z-index: 2; 
     left: 0;
     top: 0;
     right: 0;
@@ -18,23 +16,68 @@ body {
 }
 
 .modal-content{
-    background-color: darkblue;
-    margin: 15% auto;
-    width: 70%;
-    color: white;
+    width: 100%;
+    height: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, "Neue Haas Grotesk Text Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: center;
+    align-content: center;
+    margin: 0;
+    border: 0 0;
+    background-color: black;
 }
-
-.user-name-input {
+.modal-header {
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: transparent; 
-    border: 1px solid #888;
+    align-content: center;
+    text-align: center;
+    width: 80%;
+    height: 50%;
+    margin: 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+.user-name-input {
+    outline: 0;
+    display: inline-block;
+    border-width: 0 0 2px;
+    background-color: transparent;
+    border-bottom:white solid 3px;
+    height: 5%;
+    width: 40%;
+    position: relative;
+    font-size: 30px;
+    text-align: center;
+}
+.user-name-input::placeholder {
+    font-size: large;
+    color:white;
+}
+/* .user-name-submit{
+    height: 50px;
+    width: 80px;
+    border: none;
     color: white;
-    height: 95%;
-    width: 80%; 
+    display: inline-block;
+    text-align: center;
+    font-size: 18px;
     position: absolute;
-}  
+} */
+.modal-clock {
+    position: relative;
+    display: block;
+    font-size: 950%;
+    font-family: -apple-system, BlinkMacSystemFont, "Neue Haas Grotesk Text Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: center;
+    line-height: 1;
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
 
 #user-name {
     top: 65%;
@@ -45,7 +88,7 @@ body {
     text-align: center;
     padding: 10px 15px;
     color: red;
-    font-size: 20px;
+    font-size: 30px;
     background-color: white;
     
 }

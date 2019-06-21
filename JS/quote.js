@@ -5,7 +5,6 @@ class Quote {
     }
 
     randomQuote(weather) {
-        debugger;
         var weather = null;
         switch (weather) {
             case 'cloudy-night':
@@ -40,7 +39,7 @@ class Quote {
 
         }
         var ajaxRandomQuote = {
-            url: `https://favqs.com/api/quotes/?filter=weather`,
+            url: `https://favqs.com/api/quotes/?filter${weather}`,
             headers: {
                 Authorization: 'Token token="8628443dc88e82625097a33570fd61cc"',
 
