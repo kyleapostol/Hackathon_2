@@ -1,12 +1,10 @@
 class Quote {
 
     constructor() {
-        // $(".btn-success").on("click", this.randomQuote);
+
     }
 
     randomQuote(weather) {
-        debugger;
-        var weather = null;
         switch (weather) {
             case 'cloudy-night':
                 weather='cloudy';
@@ -51,12 +49,6 @@ class Quote {
                 var postAuthor = response['quotes'][0]["author"];
                 $('.quoteDiv').append(postQuote);
                 $('.quoteAuthor').append(postAuthor);
-                // $("#createQuote").append("<p id='createQuote' class='lead text-center'>");
-                    // response.quoteText + "<br/>&dash; " + response.quoteAuthor + " &dash;</p>");
-                    // console.log(response.quoteText);
-                // $("#tweet").attr("href", "https://twitter.com/home/?status=" + response.quoteText +
-                //     ' (' + response.quoteAuthor + ')');
-
             },
          }
          $.ajax(ajaxRandomQuote);
