@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-    <title>Hackathon 2</title>
+    <title>Tempo App</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
@@ -8,7 +7,8 @@
     <script src="JS/quote.js"></script>
     <!-- <script src="JS/musix.js"></script> -->
     <script src="JS/youtube.js"></script>
-    <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
+    <script src="JS/unsplash.js"></script>
+    <script src="JS/loadscreen.js"></script>
     <script src="JS/main.js"></script>
 </head>
 <body>
@@ -16,31 +16,47 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h1 class="modal-title"></h1>
+                <span class="modal-clock"></span>
+                <h1 class="modal-greeting"></h1>
                 <input type="text" class="user-name-input" placeholder="What is your name?">
-                <button class="user-name-submit"> Submit </button>
             </div>
         </div>
     </div>
 
-    <div class="MainPage">
-        <header> Good Morning, </header>
-        <div class='weather-container' id='weather-section'> [WEATHER SECTION] 
-            <div id="currentTemp"> </div>
-            <div id="weatherSummary"> </div>
-            <!-- divs get appended here -brady -->
-        </div>
-        <div class='music-container' id='music-section'> 
-            <div id="video-player"></div>
-        </div>
-        <div class='quote-container' id='daily-quotes'> [Daily Quote]
-        <div class='.btn-success'> <button>Quote</button> </div>
-        <button id='speech' type="button" value="Play">Play</button>
-            <div id="quoteBox">
-            <div class="quoteDiv"></div>
-            <div class="quoteAuthor"></div>
+    <div class='modal' id='location-modal'>
+        <div class="modal-content">
+            <div class="modal-header" id="location-modal-header">
+                <h1 class="modal-title" id="error-message"></h1>
+                <input type="text" class="location-input" id="latitude-input" placeholder="Latitude">
+                <input type="text" class="location-input" id="longitude-input" placeholder="Longitude">
             </div>
         </div>
-        <input onclick="responsiveVoice.speak();" type="button" value="Play" /> <!-- adjust to click handler later  -->
+    </div>
+    <div class="main-page">
+        <div class="main-page-header">
+            <div class="navigation-bar"> 
+                <div class="navigation-weather"></div>
+                <div class="navigation-music"></div>
+                <div class="navigation-quote"></div>
+                <div class="text-to-speech">
+                    <button class="weather-button">Temperature</button>
+                    <button class="quote-button"></button>
+                </div>
+            </div>
+        </div>
+        <div class='container' id='weather-section'>
+            <div id="current-temp"> </div>
+            <div id="weather-summary"> </div>
+        </div>
+        <div class='container' id='music-section'> 
+            <div id="video-player"></div>
+        </div>
+        <div class='container' id='daily-quotes'>
+            <div id="quote-box">
+            <div class="quote-div"></div>
+            <div class="quote-author"></div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

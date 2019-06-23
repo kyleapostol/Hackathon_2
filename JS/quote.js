@@ -1,7 +1,8 @@
 class Quote {
-
+// fix quote search parameter passing
+// add imgur api to pass through
     constructor() {
-
+        this.textToSpeech = this.textToSpeech.bind(this);
     }
 
     randomQuote(weather) {
@@ -38,24 +39,27 @@ class Quote {
 
         }
         var ajaxRandomQuote = {
-            url: `https://favqs.com/api/quotes/?filter=weather`,
+            url: `https://favqs.com/api/quotes/?filter${weather}`,
             headers: {
                 Authorization: 'Token token="8628443dc88e82625097a33570fd61cc"',
-
             },
             success: function( response ) {
                 console.log(response);
                 var postQuote = response['quotes'][0]['body'];
                 var postAuthor = response['quotes'][0]["author"];
-                $('.quoteDiv').append(postQuote);
-                $('.quoteAuthor').append(postAuthor);
+
+                $('.quote-div').append(postQuote);
+                $('.quote-author').append(postAuthor);
             },
          }
          $.ajax(ajaxRandomQuote);
-
     }
-
-
+    textToSpeech() {
+        var speech = new SpeechObject();
+        $('#quoteButton').on('click', function(){
+            speech.speak(quote);
+        })
+    }
 }
 
             
