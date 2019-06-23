@@ -12,7 +12,6 @@ class Youtube {
             method: 'GET',
             url: basicSearchUrl,
             success: function( response ) {
-                // var random = parseInt(Math.random() * 10);
                 var videoId = response['items'][0]['id']['videoId'];
                 this.renderVideo(videoId);
             }.bind(this),
@@ -25,8 +24,8 @@ class Youtube {
             src: `https://www.youtube.com/embed/${id}`,
             frameborder: 0,
             allow: `accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen;`,
-            height: 500,
-            width: 680,
+            height: '400px',
+            width: '500px',
         })
         $('#video-player').append(newVideo);
     }

@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
     <title>Tempo App</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
     <script src="JS/darksky.js"></script>
     <script src="JS/quote.js"></script>
     <!-- <script src="JS/musix.js"></script> -->
     <script src="JS/youtube.js"></script>
     <script src="JS/unsplash.js"></script>
-    <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
     <script src="JS/loadscreen.js"></script>
     <script src="JS/main.js"></script>
 </head>
@@ -16,60 +15,47 @@
     <div class="modal" id="login-modal">
         <div class="modal-content">
             <div class="modal-header">
+                <h1 class="modal-title"></h1>
                 <span class="modal-clock"></span>
-                <span class="modal-greeting"></span>
+                <h1 class="modal-greeting"></h1>
                 <input type="text" class="user-name-input" placeholder="What is your name?">
-                <!-- <button class="user-name-submit"> Submit </button> -->
             </div>
         </div>
     </div>
-        <!-- <div class= "container-fluid">
-
-
-        <div class = 'box bottom'>
-            <h1>Quote Of The Day</h1>
-            <br>
-            <em>These Random Quote's from  <a href = "https://api.forismatic.com/api/1.0/?" target ='_blank'>FORISMATIC.com</a>
-            </em>
-            <br>
-            <br>
-            <button class="btn btn-success" ><i class="fa fa-quote-right" aria-hidden="true"></i> More Wisdom</button>
-            <a class='btn btn-primary' id='tweet' href='#' target='_blank' role='button'><i class="fa fa-twitter"></i> Tweet This Wisdom</a>
-            <p id="createQuote"></p>
-    
-        </div> -->
-    <div class="MainPage">
-        <header> Good Morning, </header>
-        <div class='weather-container' id='weather-section'> [WEATHER SECTION] 
-            <div id="currentTemp"> </div>
-            <div id="weatherSummary"> </div>
-            <!-- divs get appended here -brady -->
-        </div>
-        <div class='music-container' id='music-section'> 
-            <div id="video-player"></div>
-        </div>
-        <div class='quote-container' id='daily-quotes'> [Daily Quote]
-        <div class='.btn-success'> <button>Quote</button> </div>
-        <button id='speech' type="button" value="Play">Play</button> 
-        <!-- adjust to click handler later  -->
-<!--        <button class="test-button">Test</button>-->
-<!--            <div class= "container-fluid">-->
-
-
-<!--&lt;!&ndash;            <div class = 'box bottom'>&ndash;&gt;-->
-<!--&lt;!&ndash;                <h1>Quote Of The Day</h1>&ndash;&gt;-->
-
-<!--                <button class="btn btn-success" ><></></button>-->
-<!--&lt;!&ndash;                <a class='btn btn-primary' id='tweet' href='#' target='_blank' role='button'><i class="fa fa-twitter"></i> Tweet This Wisdom</a>&ndash;&gt;-->
-<!--                <p id="createQuote"></p>-->
-
-<!--            </div>-->
-            <div id="quoteBox">
-            <div class="quoteDiv"></div>
-            <div class="quoteAuthor"></div>
+    <div class='modal' id='location-modal'>
+        <div class="modal-content">
+            <div class="modal-header" id="location-modal-header">
+                <h1 class="modal-title" id="error-message"></h1>
+                <input type="text" class="location-input" id="latitude-input" placeholder="Latitude">
+                <input type="text" class="location-input" id="longitude-input" placeholder="Longitude">
             </div>
         </div>
-        <input onclick="responsiveVoice.speak();" type="button" value="Play" /> <!-- adjust to click handler later  -->
+    </div>
+    <div class="main-page">
+        <div class="main-page-header">
+            <div class="navigation-bar"> 
+                <div class="navigation-weather"></div>
+                <div class="navigation-music"></div>
+                <div class="navigation-quote"></div>
+                <div class="text-to-speech">
+                    <button class="weather-button">Temperature</button>
+                    <button class="quote-button"></button>
+                </div>
+            </div>
+        </div>
+        <div class='container' id='weather-section'>
+            <div id="current-temp"> </div>
+            <div id="weather-summary"> </div>
+        </div>
+        <div class='container' id='music-section'> 
+            <div id="video-player"></div>
+        </div>
+        <div class='container' id='daily-quotes'>
+            <div id="quote-box">
+            <div class="quote-div"></div>
+            <div class="quote-author"></div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

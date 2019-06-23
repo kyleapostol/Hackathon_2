@@ -4,6 +4,8 @@ class DarkSkyObject{
         this.currentLocation = this.currentLocation.bind(this);
         this.quoteMethod = this.quoteMethod.bind(this);
         this.getYoutube = this.getYoutube.bind(this);
+        this.ytMusic = new Youtube();
+        this.weatherImage = new Unsplash();
         this.quoteContainer = {};
     }
    
@@ -17,12 +19,17 @@ class DarkSkyObject{
                 var temperature = "The current temperature is "+response.currently.temperature;
                 var summary = response.hourly.summary;
                 var iconCurrently = response.currently.icon;
-                $('#currentTemp').text(temperature);
-                $('#weatherSummary').text(summary);
-                this.getBackgroundImage(iconCurrently);
+                var wholeContext = temperature + 'with' + summary;
+                $('.weather-button').on('click', function(){
+                    this.speech.speak(wholeContext);
+                }.bind(this))
+                $('#current-temp').text(temperature);
+                $('#weather-summary').text(summary);
+                this.weatherImage.getImageWeather(iconCurrently);
                 this.quoteMethod(summary);
                 this.getYoutube(iconCurrently);
             }.bind(this),
+            error: function( response ){ console.log(response);}
         }
         $.ajax(weatherInfo);
     }
@@ -31,22 +38,19 @@ class DarkSkyObject{
         weatherQuoteInput.randomQuote(weather);
     }
     getYoutube(icon){
-        var ytMusic = new Youtube();
+        var musicSearch = null;
         if (icon === 'clear-day') {
-            ytMusic.ytData('happy music');
+            musicSearch = 'happy music';
         } else if (icon === 'clear-night') {
-            ytMusic.ytData('night drive music');
+            musicSearch = 'night drive music';
         } else if (icon === 'rain' || icon === 'cloudy' || icon === "fog") {
-            ytMusic.ytData('heavy rain lofi');
+            musicSearch = 'heavy rain lofi';
         } else if (icon === 'snow') {
-            ytMusic.ytData('christmas carols');
+            musicSearch = 'christmas carols';
         } else {
-            ytMusic.ytData('trending music');
+            musicSearch = 'trending music';
         }
-    }
-    getBackgroundImage(searchQuery) {
-        var unsplashImage = new Unsplash;
-        unsplashImage.getImageMain(searchQuery);
+        this.ytMusic.ytData(musicSearch);
     }
 } 
 
