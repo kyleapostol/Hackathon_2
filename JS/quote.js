@@ -47,9 +47,9 @@ class Quote {
                 console.log(response);
                 var postQuote = response['quotes'][0]['body'];
                 var postAuthor = response['quotes'][0]["author"];
+
                 $('.quote-div').append(postQuote);
                 $('.quote-author').append(postAuthor);
-
             },
          }
          $.ajax(ajaxRandomQuote);
