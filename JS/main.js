@@ -32,4 +32,7 @@ function activateCarousel() {
     $('.carousel-control-next').click(function(){
         $('#music-carousel').carousel("next");
     });
+    $('.what-is-this').on('click', function(){
+        $('#not-a-meercat').css('display', 'block');
+    })
 }

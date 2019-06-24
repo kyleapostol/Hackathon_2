@@ -38,15 +38,11 @@
     <div class="main-page">
         <div class="main-page-header">
             <h1 class="app-title">tempo</h1>
-            <h5 class="app-header">have your best day</h5>
-            <div class="navigation-bar"> 
-                <div class="navigation-weather"></div>
-                <div class="navigation-music"></div>
-                <div class="navigation-quote"></div>
-                <div class="text-to-speech">
+            <div class="text-to-speech">
+                <div class="button-container"> Text-to-Speech:
                     <button class="weather-button">Temperature</button>
                     <button class="quote-button">Quotes</button>
-                </div>
+                </div> 
             </div>
         </div>
         <div class='container' id='weather-section'>
@@ -60,7 +56,7 @@
         </div>
         <div class='container' id='music-section'>
             <h1 class="music-header">Daily Music Suggestions</h1>
-            <div id="music-carousel" class="carousel slide" data-ride="carousel"></div>
+            <div id="music-carousel" class="carousel slide" data-ride="carousel" data-interval="false">
                 <ul class="carousel-indicators">
                     <li data-target="#music-carousel" data-slide-to="0" class="item1 active"></li>
                     <li data-target="#music-carousel" data-slide-to="1" class="item2"></li>
@@ -83,13 +79,17 @@
                 <a class="carousel-control-next" href="#music-carousel" data-slide="next">
                     <span class="carousel-control-next-icon"></span>
                 </a>
-                </div>
+            </div>
+
         </div>
         <div class='container' id='daily-quotes'>
+            <h1 class="quote-header">Food for Thought</h1>
             <div id="quote-box">
                 <div class="quote-div"></div>
                 <div class="quote-author"></div>
             </div>
+            <h5 class='what-is-this'>?</h5>  
+            <div id="not-a-meercat"></div>
         </div>
     </div>
 </body>

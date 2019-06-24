@@ -44,11 +44,10 @@ class Quote {
                 Authorization: 'Token token="8628443dc88e82625097a33570fd61cc"',
             },
             success: function( response ) {
-                var postQuote = response['quotes'][0]['body'];
-                var postAuthor = response['quotes'][0]["author"];
+                var postQuote = `"${response['quotes'][0]['body']}"`;
+                var postAuthor = `-${response['quotes'][0]["author"]}`;
                 $('.quote-div').append(postQuote);
                 $('.quote-author').append(postAuthor);
-
             },
          }
          $.ajax(ajaxRandomQuote);
