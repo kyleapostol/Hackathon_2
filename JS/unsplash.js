@@ -32,9 +32,7 @@ class Unsplash {
             url: searchUrl,
             method: 'GET',
             success: function ( response ) {
-                var number = 0;
-                console.log(response)
-                debugger;
+                var number = 0; 
                 var imageResults = response['results'];
                 var key = 0;
                 for (key in imageResults) {
@@ -43,7 +41,8 @@ class Unsplash {
                         key++;
                     } else if (imageResults[key]['sponsored'] === false) {
                         parseInt(key);
-                        return number = key;
+                        number = key;
+                        break;
                     }
                 }
                 var image = response['results'][number].urls.full;

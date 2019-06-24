@@ -22,15 +22,15 @@ class LoadScreen {
         if (username) {
             modal.fadeOut(2000);
             this.getLocation();
+            $('.weather-greeting').text('Welcome, ' + username);
         } else {
             alert('please enter a name!');
         }
     }
     getLocation() {
-        var newDarkSky = new DarkSkyObject;
+        var newDarkSky = new DarkSkyObject();
         var latitude;
         var longitude;
-        //fix this conditional - always returns empty object;
         navigator.geolocation.getCurrentPosition(function(position) {
             latitude = position.coords.latitude;
             longitude = position.coords.longitude;
@@ -67,7 +67,6 @@ class LoadScreen {
         $(".modal-clock").html(currentTimeString);
         this.updateGreeting(currentHours, timeOfDay);
     }
-
     updateGreeting( hour, timeOfDay ) {
         this.greeting = "";
         if (hour < 11 && timeOfDay === 'AM') {
