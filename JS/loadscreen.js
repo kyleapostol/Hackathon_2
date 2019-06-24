@@ -31,8 +31,11 @@ class LoadScreen {
         var newDarkSky = new DarkSkyObject();
         var latitude;
         var longitude;
+        debugger;
         //fix this conditional - always returns empty object;
         navigator.geolocation.getCurrentPosition(function(position) {
+            console.log(navigator.geolocation);
+            console.log(position);
             latitude = position.coords.latitude;
             longitude = position.coords.longitude;
             newDarkSky.currentLocation(latitude, longitude);

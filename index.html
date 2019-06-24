@@ -38,7 +38,7 @@
     <div class="main-page">
         <div class="main-page-header">
             <h1 class="app-title">tempo</h1>
-            <h4 class="app-header">have your best day</h4>
+            <h5 class="app-header">have your best day</h5>
             <div class="navigation-bar"> 
                 <div class="navigation-weather"></div>
                 <div class="navigation-music"></div>
@@ -59,35 +59,36 @@
             </figure>
         </div>
         <div class='container' id='music-section'>
-            <ul class="carousel-indicators">
-                <li data-target="#demo" data-slide-to="0" class="active"></li>
-                <li data-target="#demo" data-slide-to="1"></li>
-                <li data-target="#demo" data-slide-to="2"></li>
-            </ul>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div id="video-player 1"></div>
-            </div>
-            <div class="carousel-item">
-                <div id="video-player 2"></div>
-            </div>
-            <div class="carousel-item">
-                <div id="video-player 3"></div>
-            </div>
-        </div>
-                  
-            <!-- Left and right controls -->
-        <a class="carousel-control-prev" href="#demo" data-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-        </a>
-        <a class="carousel-control-next" href="#demo" data-slide="next">
-            <span class="carousel-control-next-icon"></span>
-        </a>
+            <h1 class="music-header">Daily Music Suggestions</h1>
+            <div id="music-carousel" class="carousel slide" data-ride="carousel"></div>
+                <ul class="carousel-indicators">
+                    <li data-target="#music-carousel" data-slide-to="0" class="item1 active"></li>
+                    <li data-target="#music-carousel" data-slide-to="1" class="item2"></li>
+                    <li data-target="#music-carousel" data-slide-to="2" class="item3"></li>
+                </ul>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div id="video-player-1"></div>
+                    </div>
+                    <div class="carousel-item">
+                        <div id="video-player-2"></div>
+                    </div>
+                    <div class="carousel-item">
+                        <div id="video-player-3"></div>
+                    </div>
+                </div> 
+                <a class="carousel-control-prev" href="#music-carousel" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#music-carousel" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+                </div>
         </div>
         <div class='container' id='daily-quotes'>
             <div id="quote-box">
-            <div class="quote-div"></div>
-            <div class="quote-author"></div>
+                <div class="quote-div"></div>
+                <div class="quote-author"></div>
             </div>
         </div>
     </div>

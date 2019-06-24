@@ -12,9 +12,9 @@ class Youtube {
             method: 'GET',
             url: basicSearchUrl,
             success: function( response ) {
-                for (var i = 1; i <= 3; i++) {
-                    var videoId = response['items'][i]['id']['videoId'];
-                    this.renderVideo(videoId, i);
+                for (var count = 1; count <= 3; count++) {
+                    var videoId = response['items'][count]['id']['videoId'];
+                    this.renderVideo(videoId, count);
                 }
             }.bind(this),
             error: function( response ) { console.log(response)}
@@ -26,10 +26,8 @@ class Youtube {
             src: `https://www.youtube.com/embed/${id}`,
             frameborder: 0,
             allow: `accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen;`,
-            height: '300px',
-            width: '400px',
         })
-        newVideo.addClass('.yt-iframe');
-        $(`#video-player${videoNumber}`).append(newVideo);
+        newVideo.addClass('yt-iframe');
+        $(`#video-player-${videoNumber}`).append(newVideo);
     }
 }

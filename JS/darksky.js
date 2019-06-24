@@ -16,7 +16,6 @@ class DarkSkyObject{
             method: 'get',
             dataType: 'jsonp',
             success: function( response ) {
-                console.log("DarkSky response info!",response);
                 var temperature = "The current temperature is "+response.currently.temperature + "°";
                 var summary = response.hourly.summary;
                 var iconCurrently = response.currently.icon;

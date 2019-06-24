@@ -3,10 +3,24 @@ body {
     color: white;
 }
 iframe {
-    position: relative;
-    left: 290px;
-    top: 30px;
+    position: absolute;
+    left: 30%;
+    top: 10%;
+    height: 60%; 
+    width: 40%;
 } 
+.carousel-inner {
+    height: 100%;
+    width: 100%;    
+}
+.carousel-item{
+    height: 100%;
+    width: 100%;
+}
+.carousel-item > div {
+    height: 100%;
+    width: 100%;
+}
 .main-page {
     background-color: #2f2f2f;
     position: absolute;
@@ -24,7 +38,7 @@ iframe {
     position: relative;
 }
 .app-title {
-    font-size: 170%;
+    font-size: 300%;
     display: inline-block;
 }
 .app-header {
@@ -32,7 +46,7 @@ iframe {
     font-weight: normal;
 }
 .container {
-    height: 50%;
+    height: 70%;
     width: 100%;
     display: block;
     position: relative;
@@ -78,6 +92,11 @@ iframe {
     -o-background-size: cover;
     background-size: cover;
 }
+.music-header {
+    color: white;
+    font-weight: normal;
+    text-align: center;
+}
 .modal {
     display: none;
     position: fixed;
@@ -118,7 +137,7 @@ iframe {
 }
 .modal-title {
     display: block;
-    posiiton: relative;
+    position: relative;
     background-attachment: fixed;
     background-repeat: no-repeat;
     -webkit-background-size: cover;
@@ -206,15 +225,13 @@ iframe {
     background-color: white;
     
 }
-.quoteAuthor{
-    text-align: center;
-    color: black;
-    font-size: 40px;
 
+.quote-author{
+    text-align: center;
+    font-size: 40px;
+    position: absolute;
 }
-.quoteDiv{
+.quote-div{
     text-align: center;
     font-size: 25px;
-    color: black;
-
 }
