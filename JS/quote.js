@@ -48,13 +48,14 @@ class Quote {
                 var postAuthor = `-${response['quotes'][0]["author"]}`;
                 $('.quote-div').append(postQuote);
                 $('.quote-author').append(postAuthor);
-            },
+                this.textToSpeech(postQuote);
+            }.bind(this),
          }
          $.ajax(ajaxRandomQuote);
     }
-    textToSpeech() {
-        var speech = new SpeechObject();
-        $('#quote-button').on('click', function(){
+    textToSpeech(quote) {
+        var speech = new Speech();
+        $('.quote-button').on('click', function(){
             speech.speak(quote);
         })
     }

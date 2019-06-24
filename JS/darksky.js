@@ -20,8 +20,9 @@ class DarkSkyObject{
                 var summary = response.hourly.summary;
                 var iconCurrently = response.currently.icon;
                 var wholeContext = temperature + 'with' + summary;
+                var speech = new Speech();
                 $('.weather-button').on('click', function(){
-                    this.speech.speak(wholeContext);
+                    speech.speak(wholeContext);
                 }.bind(this))
                 $('#current-temp').text(temperature);
                 $('#weather-summary').text(summary);
@@ -37,7 +38,6 @@ class DarkSkyObject{
     }
     getSkycons(icon) {
         var skycons = new Skycons({'color': "white"});
-        // var skyconImg = this.icon.replace(/-/g, "_").toUpperCase();
         var iconArray = [
             Skycons.CLEAR_DAY, // [0]
             Skycons.CLEAR_NIGHT, // [1]
