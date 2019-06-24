@@ -1,6 +1,6 @@
 class Speech{
-    constructor(DarkSkyObject, Quote){
-        $('#speech').click(this.speak);
+    constructor(){
+        this.speak = this.speak.bind()
     }
     
     speak(word){

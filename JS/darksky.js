@@ -7,6 +7,7 @@ class DarkSkyObject{
         this.ytMusic = new Youtube();
         this.weatherImage = new Unsplash();
         this.quoteContainer = {};
+        this.getSkycons = this.getSkycons.bind(this);
     }
    
     currentLocation(latitude, longitude) {
@@ -16,7 +17,7 @@ class DarkSkyObject{
             dataType: 'jsonp',
             success: function( response ) {
                 console.log("DarkSky response info!",response);
-                var temperature = "The current temperature is "+response.currently.temperature;
+                var temperature = "The current temperature is "+response.currently.temperature + "°";
                 var summary = response.hourly.summary;
                 var iconCurrently = response.currently.icon;
                 var wholeContext = temperature + 'with' + summary;
@@ -28,10 +29,61 @@ class DarkSkyObject{
                 this.weatherImage.getImageWeather(iconCurrently);
                 this.quoteMethod(summary);
                 this.getYoutube(iconCurrently);
+                this.getSkycons(iconCurrently);
+
             }.bind(this),
             error: function( response ){ console.log(response);}
         }
         $.ajax(weatherInfo);
+    }
+    getSkycons(icon) {
+        var skycons = new Skycons({'color': "white"});
+        // var skyconImg = this.icon.replace(/-/g, "_").toUpperCase();
+        var iconArray = [
+            Skycons.CLEAR_DAY, // [0]
+            Skycons.CLEAR_NIGHT, // [1]
+            Skycons.PARTLY_CLOUDY_DAY, // [2]
+            Skycons.PARTLY_CLOUDY_NIGHT, // [3]
+            Skycons.CLOUDY, // [4]
+            Skycons.RAIN, // [5]
+            Skycons.SLEET, // [6]
+            Skycons.SNOW, // [7]
+            Skycons.WIND, // [8]
+            Skycons.FOG // [9]
+        ];
+        switch (icon) {
+            case "clear-day":
+                skycons.set("skycons",iconArray[0]);
+                break;
+            case "clear-night":
+                skycons.set("skycons",iconArray[1]);
+                break;
+            case "partly-cloudy-day":
+                skycons.set("skycons",iconArray[2]);
+                break;
+            case "partly-cloudy-night":
+                skycons.set("skycons",iconArray[3]);
+                break;
+            case "cloudy":
+                skycons.set("skycons",iconArray[4]);
+                break;
+            case "rain":
+                skycons.set("skycons",iconArray[5]);
+                break;
+            case "sleet":
+                skycons.set("skycons",iconArray[6]);
+                break;
+            case "snow":
+                skycons.set("skycons",iconArray[7]);
+                break;
+            case "wind":
+                skycons.set("skycons",iconArray[8]);
+                break;
+            case "fog":
+                skycons.set("skycons",iconArray[9]);
+                break;
+        }
+        skycons.play();
     }
     quoteMethod(weather){
         var weatherQuoteInput = new Quote();

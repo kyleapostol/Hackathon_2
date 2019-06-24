@@ -1,11 +1,15 @@
 <!DOCTYPE html>
-    <title>Tempo App</title>
+    <title>tempo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
     <script src="JS/darksky.js"></script>
+    <script src="JS/skycons.js"></script>
     <script src="JS/quote.js"></script>
-    <!-- <script src="JS/musix.js"></script> -->
     <script src="JS/youtube.js"></script>
     <script src="JS/unsplash.js"></script>
     <script src="JS/loadscreen.js"></script>
@@ -22,7 +26,6 @@
             </div>
         </div>
     </div>
-
     <div class='modal' id='location-modal'>
         <div class="modal-content">
             <div class="modal-header" id="location-modal-header">
@@ -34,22 +37,52 @@
     </div>
     <div class="main-page">
         <div class="main-page-header">
+            <h1 class="app-title">tempo</h1>
+            <h4 class="app-header">have your best day</h4>
             <div class="navigation-bar"> 
                 <div class="navigation-weather"></div>
                 <div class="navigation-music"></div>
                 <div class="navigation-quote"></div>
                 <div class="text-to-speech">
                     <button class="weather-button">Temperature</button>
-                    <button class="quote-button"></button>
+                    <button class="quote-button">Quotes</button>
                 </div>
             </div>
         </div>
         <div class='container' id='weather-section'>
-            <div id="current-temp"> </div>
-            <div id="weather-summary"> </div>
+            <h1 class="weather-header">Today's Forecast</h1>
+            <div class='weather-greeting'></div>
+            <div class="weather-text" id="current-temp"> </div>
+            <div class="weather-text" id="weather-summary"> </div>
+            <figure class="skycons">
+                    <canvas id="skycons" width="95" height="95" padding-right="20px"></canvas>
+            </figure>
         </div>
-        <div class='container' id='music-section'> 
-            <div id="video-player"></div>
+        <div class='container' id='music-section'>
+            <ul class="carousel-indicators">
+                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+                <li data-target="#demo" data-slide-to="2"></li>
+            </ul>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div id="video-player 1"></div>
+            </div>
+            <div class="carousel-item">
+                <div id="video-player 2"></div>
+            </div>
+            <div class="carousel-item">
+                <div id="video-player 3"></div>
+            </div>
+        </div>
+                  
+            <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
         </div>
         <div class='container' id='daily-quotes'>
             <div id="quote-box">
