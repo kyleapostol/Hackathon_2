@@ -29,6 +29,7 @@ class LoadScreen {
     }
     getLocation() {
         var newDarkSky = new DarkSkyObject();
+        var userMap = new Maps();
         var latitude;
         var longitude;
         navigator.geolocation.getCurrentPosition(function(position) {
@@ -42,14 +43,11 @@ class LoadScreen {
             $('#error-message').text(errorMessage);
             locationModal.css('display', 'block');
             $(document).on('keypress', function(e){
-                var inputLatitude = $('#latitude-input').val();
-                var inputLongitude = $('#longitude-input').val();
+                var address = $('.location-input').val();
                 if (e.which == 13) {
-                    if (inputLatitude && inputLongitude) {
-                        latitude = parseFloat(inputLatitude);
-                        longitude = parseFloat(inputLongitude);
-                        newDarkSky.currentLocation(latitude, longitude);
-                        locationModal.fadeOut(1500);
+                    if (address) {
+                        userMap.handleMaps(address);
+                        locationModal.fadeOut(2000);
                     }
                 }
             })
